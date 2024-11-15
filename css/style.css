@@ -1,0 +1,77 @@
+body{
+    background-color: darkblue;
+    margin: 0px;
+    height: 100vh;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.upperBar{
+    width: 100%;
+    height: 50px;
+    background-color: whitesmoke;
+    padding-left: 80px;
+    position: relative;
+}
+
+.slideMenu{
+    padding: 20px;
+    width: 100px;
+    height: 100%;
+    background-color: whitesmoke;
+    overflow-x: hidden;
+}
+
+#menu{
+    cursor: pointer;
+    position: absolute;
+    font-size: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#menuImg{
+    height: 16px;
+    width: 16px;
+    position: absolute;
+    font-size: 18px;
+    top: 50%;
+    transform: translate(-135%,-50%);
+}
+
+li{
+    list-style: none;
+    white-space: nowrap;
+}
+
+.animationHide{
+    animation: shrink 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes shrink {
+    100%{
+        width: 0%;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+.animationShow{
+    animation: extend 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes extend {
+    0%{
+        width: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    100%{
+        width: 100px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
